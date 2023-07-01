@@ -14,7 +14,7 @@ public class Main {
 	
 	public static void main(String[] args) {
 		
-		CSVReader reader = new CSVReader(Constants.PATH_DATASET_2);
+		CSVReader reader = new CSVReader(Constants.PATH_DATASET_1);
 		LinkedList<Arco<Integer>> archs = reader.read();
 
 		Backtracking back = new Backtracking();
@@ -33,6 +33,7 @@ public class Main {
 	
 	private static void printSolution(ArrayList<Arco<Integer>> solution, String service, int distance, long steps) {
 		System.out.println(service);
+		System.out.println("Solucion encontrada:");
 		for(Arco<Integer> a: solution) {
 			System.out.println(a);
 		}
